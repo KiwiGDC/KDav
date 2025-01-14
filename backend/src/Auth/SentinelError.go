@@ -13,4 +13,7 @@ var (
 	ErrAuthTypeNotRequirePassword = AuthError{Code: 2, Message: "password is not required for this auth type"}
 	// For anonymous, token and password and username is not required
 	ErrAuthTypeAnonymousField = AuthError{Code: 3, Message: "token, password or username field is not allowed for this auth type 'Anonymous'"}
+	// For AuthVerificationErrorType
+	ErrAuthVerificationErrorType = AuthError{Code: 4, Message: "Used verification mismatch a AuthType"}
+	ErrUnknownAuthType           = AuthError{Code: 5, Message: "Unknown authentification type : 'password', 'token' or 'anonymous'"}
 )
