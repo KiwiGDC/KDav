@@ -34,6 +34,7 @@ func main() {
 		LockSystem: webdav.NewMemLS(),
 		Logger:     logger,
 	}
+
 	print("Start WebDav server")
 	http.ListenAndServe("localhost:8080", digestAuthMiddleware(handler))
 }
